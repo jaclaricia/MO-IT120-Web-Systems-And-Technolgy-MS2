@@ -54,6 +54,13 @@ document.querySelector('.check').addEventListener('click', function () {
       // document.querySelector('.message').textContent = '💥 You lost the game!';
       displayMessage('💥 You lost the game!');
       document.querySelector('.score').textContent = 0;
+
+      // Disable the "Check!" button and style it as grayed out
+      document.querySelector('.check').disabled = true;
+      document.querySelector('.check').style.backgroundColor = '#888';
+      document.querySelector('.check').style.cursor = 'not-allowed';
+      
+    
     }
   }
 
@@ -93,6 +100,10 @@ document.querySelector('.again').addEventListener('click', function () {
 
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
-});
 
+  // Enable the "Check!" button and reset its style
+  document.querySelector('.check').disabled = false;
+  document.querySelector('.check').style.backgroundColor = '#eee';
+  document.querySelector('.check').style.cursor = 'pointer';
+});
 
